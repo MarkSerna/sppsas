@@ -208,7 +208,9 @@ body {
 }
 
 .main thead tr td:first-child,
-.main thead tr td:last-child { background: transparent; }
+.main thead tr td:last-child {
+  background: transparent;
+}
 
 /* Data rows */
 .dr td {
@@ -318,21 +320,18 @@ body {
 }
 
 .bx.pct-box {
-  background: transparent;
-  border: none;
-  height: 35px;
-  position: relative;
+  background: #fbe6d4;
+  border: 2px solid #f98f43;
+  height: 21px;
   font-family: Calibri, sans-serif;
   font-weight: bold;
   font-size: 10px;
   color: #000;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  padding-top: 4px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><polygon points='2,2 98,2 98,60 55,60 50,95 45,60 2,60' fill='white' stroke='%23f98f43' stroke-width='4'/></svg>");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  padding-top: 0;
+  background-image: none;
 }
 
 .r-pd td:not(.bx):not(.lbl):not(.sp) {
@@ -340,7 +339,7 @@ body {
 }
 
 .pm {
-  font-size: 5px;
+  font-size: 8px;
   font-weight: 400;
   color: #000;
   text-align: left;
@@ -349,6 +348,28 @@ body {
 
 .r-pm td {
   height: 10px;
+}
+
+.r-arrow td {
+  height: 20px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.main .arr {
+  position: relative;
+  overflow: visible;
+}
+
+.main .arr::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 18px solid #f98f43;
+  margin: 0 auto;
 }
 
 .r-pc td:not(.bx):not(.lbl):not(.sp) {
