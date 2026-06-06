@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHTE - Cuestionario</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="page">
+
+    <img src="images/image_0.png" alt="" class="img-hdr">
+    <div class="metadata-container">
+      <img src="images/image_5.png" alt="" class="img-sub">
+      <input type="text" id="meta-apellidos" class="meta-input">
+      <input type="text" id="meta-edad" class="meta-input text-center">
+      <button type="button" id="sexo-v" class="sexo-btn selected" aria-label="Sexo Masculino"></button>
+      <button type="button" id="sexo-m" class="sexo-btn" aria-label="Sexo Femenino"></button>
+      <input type="text" id="meta-centro" class="meta-input">
+      <input type="text" id="meta-curso" class="meta-input text-center">
+    </div>
+    <img src="images/image_1.png" alt="" class="img-title">
+
+    <div class="wrap">
+      <table class="main">
+        <colgroup>
+          <col class="c-lbl">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-r-sp">
+        </colgroup>
+        <thead>
+          <tr class="hdr">
+            <td></td>
+            <td colspan="3">AC</td>
+            <td class="sp"></td>
+            <td colspan="3">LU</td>
+            <td class="sp"></td>
+            <td colspan="3">ES</td>
+            <td class="sp"></td>
+            <td colspan="3">PL</td>
+            <td class="sp"></td>
+            <td colspan="3">TE</td>
+            <td class="sp"></td>
+            <td colspan="3">EX</td>
+            <td class="sp"></td>
+            <td colspan="3">TR</td>
+            <td></td>
+          </tr>
+        </thead>
+        <tbody id="dataBody"></tbody>
+      </table>
+
+      <table class="res">
+        <colgroup>
+          <col class="c-lbl">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-r-sp">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td colspan="30" class="gap1"></td>
+          </tr>
+          <tr class="r-pd">
+            <td class="lbl">PD</td>
+            <td></td>
+            <td></td>
+            <td class="bx" id="pd-AC"></td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="bx" id="pd-LU"></td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="bx" id="pd-ES"></td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="bx" id="pd-PL"></td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="bx" id="pd-TE"></td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="bx" id="pd-EX"></td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="bx" id="pd-TR"></td>
+            <td></td>
+          </tr>
+          <tr class="r-pm">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="pm">P. m&aacute;x=10</td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="pm">P. m&aacute;x=10</td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="pm">P. m&aacute;x=6</td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="pm">P. m&aacute;x=10</td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="pm">P. m&aacute;x=9</td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="pm">P. m&aacute;x=5</td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="pm">P. m&aacute;x=6</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="30" class="gap2"></td>
+          </tr>
+          <tr class="r-pc">
+            <td class="lbl">%</td>
+            <td></td>
+            <td></td>
+            <td class="bx pct-box" id="pct-AC"></td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="bx pct-box" id="pct-LU"></td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="bx pct-box" id="pct-ES"></td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="bx pct-box" id="pct-PL"></td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="bx pct-box" id="pct-TE"></td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="bx pct-box" id="pct-EX"></td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="bx pct-box" id="pct-TR"></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="chart-container-wrap">
+        <img src="images/image_2.png" alt="Eje Izquierdo" class="chart-y-axis-left">
+        <div class="chart-canvas-container">
+          <canvas id="chart" height="324"></canvas>
+        </div>
+        <img src="images/image_3.png" alt="Eje Derecho" class="chart-y-axis-right">
+      </div>
+
+      <table class="ftr">
+        <colgroup>
+          <col class="c-lbl">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-gap">
+          <col class="c-num">
+          <col class="c-resp">
+          <col class="c-chk">
+          <col class="c-r-sp">
+        </colgroup>
+        <tbody>
+          <tr class="ftr-row">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="ft">AC</td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="ft">LU</td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="ft">ES</td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="ft">PL</td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="ft">TE</td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="ft">EX</td>
+            <td class="sp"></td>
+            <td></td>
+            <td></td>
+            <td class="ft">TR</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <img src="images/image_4.png" alt="" class="img-ftr">
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
