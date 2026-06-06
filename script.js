@@ -62,7 +62,8 @@ function build() {
       for (let d = 0; d < DIMS.length; d++) {
         sr.appendChild(td()); // num spacer
         sr.appendChild(td()); // resp spacer
-        sr.appendChild(td('xx')); // chk spacer
+        const isPast = r >= byDim[DIMS[d]].length;
+        sr.appendChild(isPast ? td() : td('xx')); // chk spacer
         if (d < DIMS.length - 1) sr.appendChild(td()); // gap
       }
       sr.appendChild(td()); // right spacer
@@ -99,7 +100,7 @@ function build() {
         
         tr.appendChild(n); tr.appendChild(rsp); tr.appendChild(xx);
       } else {
-        tr.appendChild(td('num')); tr.appendChild(td('resp')); tr.appendChild(td('xx'));
+        tr.appendChild(td('num')); tr.appendChild(td('resp')); tr.appendChild(td());
       }
       if (d < DIMS.length - 1) tr.appendChild(td());
     }
