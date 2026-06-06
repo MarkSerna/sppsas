@@ -240,28 +240,27 @@ body {
   background: #fbe6d4;
   cursor: pointer;
   user-select: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0;
 }
 
-.dr .xx:hover {
+.dr .xx:hover .chk-box {
   background: #f8d4b8;
 }
 
 .chk-box {
-  width: 14px;
-  height: 14px;
-  background: #fff;
-  border: 1px solid #d56a27;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: Calibri, sans-serif;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: bold;
   color: #c55a11;
-  line-height: 14px;
+  line-height: 1;
 }
 
 /* Separator rows */
