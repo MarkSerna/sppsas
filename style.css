@@ -183,8 +183,12 @@ body {
   text-align: center;
   vertical-align: middle;
   padding: 0;
-  font-size: 10px;
   font-family: Calibri, sans-serif;
+}
+
+.main thead td,
+.main tbody td {
+  font-size: 10px;
 }
 
 .main thead td {
@@ -270,23 +274,15 @@ body {
   background: #fbe6d4;
 }
 
-/* ---- RESULTS TABLE ---- */
-.res {
-  border-collapse: collapse;
-  width: 100%;
-  table-layout: fixed;
-}
-
-.res td {
-  border: none;
-  text-align: center;
-  vertical-align: middle;
+.sep-pd td {
+  height: 14px;
+  font-size: 0;
+  line-height: 0;
   padding: 0;
-  font-family: Calibri, sans-serif;
 }
 
 .gap1 td {
-  height: 5px;
+  height: 14px;
   font-size: 0;
   line-height: 0;
   padding: 0;
@@ -308,12 +304,17 @@ body {
 
 .bx {
   background: #fbe6d4;
-  border: 2px solid #000;
+  border: 2px solid #f98f43;
   font-weight: 700;
   font-size: 10px;
   color: #000;
   height: 21px;
   line-height: 17px;
+}
+
+/* Mayor especificidad para que el borde de .bx prevalezca sobre .main td { border: none } */
+.main .bx {
+  border: 2px solid #f98f43;
 }
 
 .bx.pct-box {
@@ -354,12 +355,13 @@ body {
   height: 21px;
 }
 
-.res td.sp {
+.main tfoot td.sp {
   width: 4px;
   min-width: 4px;
   padding: 0;
   background: transparent;
 }
+
 
 /* ---- CHART CONTAINER ---- */
 .chart-container-wrap {
