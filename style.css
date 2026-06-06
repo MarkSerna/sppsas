@@ -322,15 +322,6 @@ body {
 .bx.pct-box {
   background: #fbe6d4;
   border: 2px solid #f98f43;
-  height: 21px;
-  font-family: Calibri, sans-serif;
-  font-weight: bold;
-  font-size: 10px;
-  color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 0;
   background-image: none;
 }
 
@@ -354,6 +345,8 @@ body {
   height: 20px;
   padding: 0;
   vertical-align: middle;
+  font-size: 0;
+  line-height: 0;
 }
 
 .main .arr {
@@ -364,16 +357,21 @@ body {
 .main .arr::after {
   content: '';
   display: block;
+  position: relative;
+  top: -0.6px;
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
   border-top: 18px solid #f98f43;
   margin: 0 auto;
 }
 
 .r-pc td:not(.bx):not(.lbl):not(.sp) {
   height: 21px;
+  font-size: 0;
+  line-height: 0;
+  padding: 0;
 }
 
 .main tfoot td.sp {
@@ -389,7 +387,7 @@ body {
   display: flex;
   align-items: stretch;
   width: 100%;
-  margin-top: 8px;
+  margin-top: 2px;
   margin-bottom: 4px;
   padding: 0;
 }
