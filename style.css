@@ -469,14 +469,47 @@ body {
   }
 }
 
+/* ---- IMPRESIÓN ---- */
+.print-controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.print-btn {
+  background-color: #f98f43;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.2s;
+  font-family: Calibri, 'Segoe UI', sans-serif;
+}
+
+.print-btn:hover {
+  background-color: #e07b32;
+}
+
 @media print {
+  @page {
+    margin: 0;
+  }
+
   body {
     background: #fff;
-    padding: 0;
+    padding: 1cm;
+  }
+
+  .print-controls {
+    display: none;
   }
 
   .page {
     max-width: 100%;
     box-shadow: none;
+    margin: 0;
   }
 }
