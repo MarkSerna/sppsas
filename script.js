@@ -132,18 +132,18 @@ function draw(sc) {
 
   ctx.clearRect(0, 0, W, H);
 
-  // Draw perimetral orange border around grid (from top y=11.5 to bottom y=311.5)
+  // Draw perimetral orange border around grid (from top y=2.5 to bottom y=322.5)
   ctx.strokeStyle = '#f98f43';
   ctx.lineWidth = 1.5;
   ctx.beginPath();
-  ctx.rect(0.75, 11.5, W - 1.5, 300);
+  ctx.rect(0.75, 2.5, W - 1.5, 320);
   ctx.stroke();
 
-  // Draw thin gray horizontal grid lines (at 10% steps from 10% to 90%)
+  // Draw thin gray horizontal grid lines (at 10% steps from 0% to 100%)
   ctx.strokeStyle = '#e0e0e0';
   ctx.lineWidth = 0.5;
-  for (let p = 10; p <= 90; p += 10) {
-    const y = 311.5 - (p / 100) * 300;
+  for (let p = 0; p <= 100; p += 10) {
+    const y = 311.5 - (p / 100) * 295;
     ctx.beginPath();
     ctx.moveTo(0, y);
     ctx.lineTo(W, y);
@@ -153,7 +153,7 @@ function draw(sc) {
   // Draw 50% line as dashed for reference
   ctx.strokeStyle = '#ccc';
   ctx.setLineDash([2, 2]);
-  const y50 = 311.5 - 0.5 * 300;
+  const y50 = 311.5 - 0.5 * 295;
   ctx.beginPath();
   ctx.moveTo(0, y50);
   ctx.lineTo(W, y50);
@@ -173,7 +173,7 @@ function draw(sc) {
   for (let i = 0; i < DIMS.length; i++) {
     const x = xs[i];
     const pct = sc[DIMS[i]].pct;
-    const y = 311.5 - (pct / 100) * 300;
+    const y = 311.5 - (pct / 100) * 295;
     if (i === 0) ctx.moveTo(x, y);
     else ctx.lineTo(x, y);
   }
@@ -183,7 +183,7 @@ function draw(sc) {
   for (let i = 0; i < DIMS.length; i++) {
     const x = xs[i];
     const pct = sc[DIMS[i]].pct;
-    const y = 311.5 - (pct / 100) * 300;
+    const y = 311.5 - (pct / 100) * 295;
 
     // Circle markers (blue border, white center)
     ctx.fillStyle = '#4472c4';
